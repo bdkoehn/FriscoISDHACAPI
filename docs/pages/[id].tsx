@@ -26,7 +26,7 @@ const Route: React.FC<Props> = ({ route }) => {
     setResponseData(route.exampleResponse)
   }, [dynamicRoute])
 
-  const baseUrl = route.queryParameters.reduce((previousValue, currentValue) => previousValue + `${currentValue.title}={${currentValue.title}}&`, `${route.type} /${route.id}?`).slice(0, -1)
+  const baseUrl = route.queryParameters.reduce((previousValue, currentValue) => previousValue + `${currentValue.title}={${currentValue.title}}&`, `${route.type} /api/${route.id}?`).slice(0, -1)
 
   const handleTestQueryParameterChange = (parameterName: string, value: string) => {
     const testQueryParmeters = { ...testQueryParameters }

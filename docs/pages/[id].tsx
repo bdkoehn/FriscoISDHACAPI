@@ -47,7 +47,7 @@ const Route: React.FC<Props> = ({ route }) => {
 
     Object.keys(testQueryParameters).forEach((key) => {
       //@ts-ignore
-     url = url.replace(`{${key}}`, testQueryParameters[key]).replace(`${route.type} `, "https://friscoisdhacapi.vercel.app");
+     url = url.replace(`{${key}}`, testQueryParameters[key]).replace(`${route.type} `, "https://denton-isdhacapi.vercel.app/");
     })
 
     const response = await axios.get(url).catch((err) => setIsError(true));

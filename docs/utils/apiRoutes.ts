@@ -20,7 +20,7 @@ const APIRoutes: IAPIRoute[] = [
                 required: true
             }
         ],
-        exampleRequest: `axios.get("https://friscoisdhacapi.vercel.app/api/info?username=john&password=doe").then((res) => {
+        exampleRequest: `axios.get("https://denton-isdhacapi.vercel.app/api/info?username=john&password=doe").then((res) => {
             console.log(res.data);
         }).catch((error) => {
             console.log(error);
@@ -54,7 +54,7 @@ const APIRoutes: IAPIRoute[] = [
                 required: true
             }
         ],
-        exampleRequest: `https://friscoisdhacapi.vercel.app/api/gpa?username=john&password=doe").then((res) => {
+        exampleRequest: `https://denton-isdhacapi.vercel.app/api/gpa?username=john&password=doe").then((res) => {
             console.log(res.data);
         }).catch((error) => {
             console.log(error);
@@ -84,7 +84,7 @@ const APIRoutes: IAPIRoute[] = [
                 required: true
             }
         ],
-        exampleRequest: `https://friscoisdhacapi.vercel.app/api/schedule?username=john&password=doe").then((res) => {
+        exampleRequest: `https://denton-isdhacapi.vercel.app/api/schedule?username=john&password=doe").then((res) => {
             console.log(res.data);
         }).catch((error) => {
             console.log(error);
@@ -299,7 +299,7 @@ const APIRoutes: IAPIRoute[] = [
                 required: true
             }
         ],
-        exampleRequest: `https://friscoisdhacapi.vercel.app/api/currentclasses?username=john&password=doe").then((res) => {
+        exampleRequest: `https://denton-isdhacapi.vercel.app/api/currentclasses?username=john&password=doe").then((res) => {
             console.log(res.data);
         }).catch((error) => {
             console.log(error);
@@ -657,7 +657,7 @@ const APIRoutes: IAPIRoute[] = [
                 required: true
             }
         ],
-        exampleRequest: `axios.get("https://friscoisdhacapi.vercel.app/api/pastclasses?username=john&password=doe&quarter=1").then((res) => {
+        exampleRequest: `axios.get("https://denton-isdhacapi.vercel.app/api/pastclasses?username=john&password=doe&quarter=1").then((res) => {
             console.log(res.data);
         }).catch((error) => {
             console.log(error);

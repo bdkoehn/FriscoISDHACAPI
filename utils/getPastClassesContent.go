@@ -10,7 +10,7 @@ import (
 func GetPastClassesContent(username, password, quarter string) string {
 	initialResponse, _ := restyClient.R().
 		EnableTrace().
-		Get("https://hac.friscoisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2f")
+		Get("https://denhac.dentonisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2f")
 
 	doc, _ := goquery.NewDocumentFromReader(strings.NewReader(initialResponse.String()))
 
@@ -20,9 +20,9 @@ func GetPastClassesContent(username, password, quarter string) string {
 	requestHeaders := map[string]string{
 		"User-Agent":                 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36",
 		"X-Requested-With":           "XMLHttpRequest",
-		"Host":                       "hac.friscoisd.org",
-		"Origin":                     "hac.friscoisd.org",
-		"Referer":                    "https://hac.friscoisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fhomeaccess%2f",
+		"Host":                       "denhac.dentonisd.org",
+		"Origin":                     "denhac.dentonisd.org",
+		"Referer":                    "https://denhac.dentonisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fhomeaccess%2f",
 		"__RequestVerificationToken": requestVerificationToken,
 	}
 
@@ -39,11 +39,11 @@ func GetPastClassesContent(username, password, quarter string) string {
 	}
 
 	pastAssignmentsRequestHeader := map[string]string{
-		"Host":             "hac.friscoisd.org",
+		"Host":             "denhac.dentonisd.org",
 		"User-Agent":       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0",
 		"X-Requested-With": "XMLHttpRequest",
-		"Origin":           "https://hac.friscoisd.org",
-		"Referer":          "https://hac.friscoisd.org/HomeAccess/Content/Student/Assignments.aspx",
+		"Origin":           "https://denhac.dentonisd.org",
+		"Referer":          "https://denhac.dentonisd.org/HomeAccess/Content/Student/Assignments.aspx",
 	}
 
 	pastAssignmentsRequestPayload := map[string]string{
@@ -110,14 +110,14 @@ func GetPastClassesContent(username, password, quarter string) string {
 
 	homepageResponse, _ := restyClient.R().
 		EnableTrace().
-		Post("https://hac.friscoisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2f")
+		Post("https://denhac.dentonisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2f")
 
 	cookies = homepageResponse.Cookies()
 	restyClient.SetCookies(cookies)
 	restyClient.SetFormData(pastAssignmentsRequestPayload)
 	restyClient.SetHeaders(pastAssignmentsRequestHeader)
 
-	finalResponse, _ := restyClient.R().EnableTrace().Post("https://hac.friscoisd.org/HomeAccess/Content/Student/Assignments.aspx")
+	finalResponse, _ := restyClient.R().EnableTrace().Post("https://denhac.dentonisd.org/HomeAccess/Content/Student/Assignments.aspx")
 
 	return finalResponse.String()
 }

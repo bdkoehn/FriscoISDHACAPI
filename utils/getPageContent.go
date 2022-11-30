@@ -12,7 +12,7 @@ var restyClient = resty.New()
 func GetPageContent(username, password, url string) string {
 	initialResponse, _ := restyClient.R().
 			EnableTrace().
-			Get("https://hac.friscoisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2f")
+			Get("https://denhac.dentonisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2f")
 
 	doc, _ := goquery.NewDocumentFromReader(strings.NewReader(initialResponse.String()))
 
@@ -22,9 +22,9 @@ func GetPageContent(username, password, url string) string {
 	requestHeaders := map[string]string{
 		"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36",
 		"X-Requested-With": "XMLHttpRequest",
-		"Host": "hac.friscoisd.org",
-		"Origin": "hac.friscoisd.org",
-		"Referer": "https://hac.friscoisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fhomeaccess%2f",
+		"Host": "denhac.dentonisd.org",
+		"Origin": "denhac.dentonisd.org",
+		"Referer": "https://denhac.dentonisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fhomeaccess%2f",
 		"__RequestVerificationToken": requestVerificationToken,
 	}
 
@@ -46,7 +46,7 @@ func GetPageContent(username, password, url string) string {
 
 	homepageResponse, _ := restyClient.R().
 		EnableTrace().
-		Post("https://hac.friscoisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2f")
+		Post("https://denhac.dentonisd.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2f")
 	
 	cookies = homepageResponse.Cookies()
 	restyClient.SetCookies(cookies)

@@ -8,7 +8,7 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 
-	"github.com/SumitNalavade/FRISCOISDHACAPIV2/utils"
+	"github.com/bdkoehn/FriscoISDHACAPI/utils"
 )
 
 func GPAHandler(w http.ResponseWriter, r *http.Request) {

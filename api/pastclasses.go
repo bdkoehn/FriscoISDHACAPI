@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/SumitNalavade/FRISCOISDHACAPIV2/utils"
+	"github.com/bdkoehn/FriscoISDHACAPI/utils"
 )
 
 func PastClassesHandler(w http.ResponseWriter, r *http.Request) {

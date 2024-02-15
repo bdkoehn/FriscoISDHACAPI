@@ -17,7 +17,7 @@ const Home: React.FC = () => {
                     <h3 className="text-2xl font-bold mt-10 my-2 text-headline">Base API URL</h3>
                     <CopyBlock
                         language="javascript"
-                        text="https://friscoisdhacapi.vercel.app"
+                        text="https://denton-isdhacapi.vercel.app"
                         showLineNumbers={false}
                         theme={solarizedLight}
                         wrapLines={true}
@@ -27,7 +27,7 @@ const Home: React.FC = () => {
                     <h3 className="text-2xl font-bold mt-10 my-2 text-headline">Example API Request</h3>
                     <CopyBlock
                         language="javascript"
-                        text={`axios.get("friscoisdhacapi.vercel.app${apiRoutes[0].exampleRequest}").then((res) => {
+                        text={`axios.get("denton-isdhacapi.vercel.app${apiRoutes[0].exampleRequest}").then((res) => {
     console.log(res.data);
 }).catch((error) => {
     console.log(error);

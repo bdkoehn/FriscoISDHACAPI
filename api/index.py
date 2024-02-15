@@ -13,7 +13,7 @@ class handler(BaseHTTPRequestHandler):
         self.wfile.write("""
     <h1>Frisco ISD HAC API</h1>
 	<p>Documentation:</p>
-	<a href="https://friscoisdhacapi.vercel.app/" target="_blank">https://friscoisdhacapi.vercel.app/</a>
+	<a href="https://denton-isdhacapi.vercel.app/" target="_blank">https://denton-isdhacapi.vercel.app/</a>
     """.encode(encoding="utf_8"))
 
         return
